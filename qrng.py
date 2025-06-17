@@ -14,7 +14,6 @@ def qrng_random_number(n_bits):
     return int(''.join(str(b) for b in bits), 2)
 
 def getprime(n_bits=16):
-    assert n_bits >= 2, "Bit length must be at least 2"
     while True:
         num = qrng_random_number(n_bits)
         num |= 1
